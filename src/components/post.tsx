@@ -6,25 +6,8 @@ import { Avatar } from './avatar';
 
 import { ptBR } from 'date-fns/locale/pt-BR'
 import styles from './post.module.css';
+import { PostType } from '../types/postType';
 
-interface Author {
-    name: string;
-    role: string;
-    avatarUrl: string;
-}
-
-interface Content {
-    type: 'paragraph' | 'link';
-    content: string
-
-}
-
-interface PostType {
-    id: number;
-    author: Author;
-    publishedAt: Date;
-    content: Content[];
-}
 
 interface PostProps {
     post: PostType;
